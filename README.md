@@ -1,5 +1,6 @@
 # Business Services Office Plus WordPress theme
 
+BUILD
 WordPress theme for officeplus.ucf.edu, created by Mike Setzer, maintained by Business Services.
 This theme is built around Advanced Custom Fields.
 
