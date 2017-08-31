@@ -1,0 +1,35 @@
+{
+  "name": "bs-officeplus-theme",
+  "version": "1.0.0",
+  "description": "Package for Office Plus theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UCF/BS-officeplus-theme.git"
+  },
+  "keywords": [
+    "officeplus",
+    "gulp",
+    "sass",
+    "UCF",
+    "business",
+    "services",
+    "business services",
+    "mike setzer",
+    "setzer"
+  ],
+  "author": "Mike Setzer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UCF/BS-officeplus-theme/issues"
+  },
+  "homepage": "https://github.com/UCF/BS-officeplus-theme#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
