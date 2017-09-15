@@ -1,32 +1,26 @@
+//gulpfile.js
+
 var gulp        = require('gulp');
 var sass        = require('gulp-sass');
-var prefix      = require('gulp-autoprefixer');
-var cp          = require('child_process');
 
-/**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+//Style paths
+var sassFiles = 'lib/css/sass/*.sass',
+    cssDest = 'lib/css/';
+
+/*
+ * Uses gulp.src() to pass the location of SCSS files.
+ * Path is relative to the gulpfile.js.
+ * sass() function emits events if tehre are errors. You can listen using .on('error', sass.logError))
+ * 
  */
-gulp.task('sass', function () {
-    return gulp.src('_scss/main.scss')
-        .pipe(sass({
-            includePaths: ['scss'],
-        }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('_site/css'))
-        .pipe(gulp.dest('css'));
+gulp.task('styles', function(){
+    gulp.src(sassFiles)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(cssDest));
 });
 
-/**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function () {
-    gulp.watch('_scss/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*']);
+gulp.task('watch',function() {
+    gulp.watch(sassFiles,['styles']);
 });
 
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
 gulp.task('default', ['watch']);
