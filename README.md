@@ -1,5 +1,6 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-wordpress.svg)](http://forthebadge.com) 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-wordpress.svg)](http://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)
 
 # Business Services Office Plus WordPress theme
 Repository for officeplus.ucf.edu WordPress theme build, created by Mike Setzer, maintained by Business Services.
