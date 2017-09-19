@@ -14,7 +14,7 @@ This project includes a full setup of GulpJS and SASS for automation, and Jenkin
 ## Getting Started
 1. If needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
 - If needed, install `gulp` with `npm install gulp -g`.
-- Clone this repo with `git clone https://github.com/minamarkham/sassy-starter` or download the zip.
+- Clone this repo with `git clone https://github.com/UCF/BS-officeplus-theme` or download the zip.
 - In terminal, `cd` to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter (on Macs).
 - In terminal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`. This should install all [dependencies](#dependencies).
 - In terminal, enter `gulp`.
