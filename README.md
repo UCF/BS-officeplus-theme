@@ -73,29 +73,13 @@ $ gulp
 - build
   - styles
 
-  ## Directory structure
+  ## SMACSS Directory structure
 
 ```
 ┌── .gitignore
-├── .htaccess
 ├── .sass-lint.yml
 ├── .travis.yml
-├── src
-│   ├── browserconfig.xml
-│   ├── crossdomain.xml
-│   ├── humans.txt
-│   ├── icons
-│   │   ├── apple-touch-icon-114x114-precomposed.png
-│   │   ├── apple-touch-icon-57x57-precomposed.png
-│   │   ├── apple-touch-icon-72x72-precomposed.png
-│   │   ├── apple-touch-icon-precomposed.png
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon.ico
-│   │   └── favicon.png
-│   ├── img
-│   ├── index.html
-│   ├── js
-│   ├── robots.txt
+├── lib
 │   └── scss
 │       ├── atoms
 │       │   └── _index.scss
@@ -114,6 +98,9 @@ $ gulp
 │       │   └── _index.scss
 │       ├── overrides
 │       │   └── _index.scss
+│       ├── partials
+│       │   └── _home.scss
+│       │   └── _index.scss
 │       ├── states
 │       │   ├── _index.scss
 │       │   └── _print.scss
@@ -128,8 +115,10 @@ $ gulp
 │       │   ├── _mixins.scss
 │       │   └── _typography.scss
 │       ├── styles.scss
+│       ├── styles.css
 │       └── _shame.scss
 ├── gulpfile.js
+├── README.md
 └── package.json
 ```
 
