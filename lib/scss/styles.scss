@@ -10,6 +10,17 @@
 // Author:  Mike Setzer, Mina Markham
 // ==========================================================================
 
+// ==========================================================================
+// WordPress modularization
+//
+// All Wordpress theme modifications are added to the partials folders
+//
+// If you are modifying a plugin's CSS, eg. GravityForms, simply:
+// Add a _gforms.scss file to partials
+// Add the import to partials/_index.scss
+// And head the _gforms.scss file with the appropriate selector
+// ==========================================================================
+
 // CSS Debugging
 //
 // Toggle layout debugging with CSS Pesticide.

@@ -14,13 +14,11 @@ This project includes a full setup of GulpJS and SASS for automation, and Jenkin
 ## Getting Started
 1. If needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
 - If needed, install `gulp` with `npm install gulp -g`.
-- Clone this repo with `git clone https://github.com/minamarkham/sassy-starter` or download the zip.
+- Clone this repo with `git clone https://github.com/UCF/BS-officeplus-theme` or download the zip.
 - In terminal, `cd` to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter (on Macs).
 - In terminal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`. This should install all [dependencies](#dependencies).
 - In terminal, enter `gulp`.
-- Your browser should open at `http://localhost:3000`. You can access this same page on any device on the same wifi network and they'll see whats on your screen. It'll even sync scrolls and clicks!
-- Edit your code inside of the `src` folder.
-- Your complied and minified css, html, and javascript files will be created and updated in `dist/`. Never edit files within the `dist/` folder, as it gets deleted frequently.
+- Your SCSS files will be compiled and minified to `lib/styles.css`
 - Keep `gulp` running while you're making changes. When you want to stop the gulp task, hit `ctrl + C`.
 
 _For theming: add separate file (theme.scss) in`src/scss/themes/`, override the default `$theme` variable, and run `gulp themes`._
@@ -33,6 +31,19 @@ This will give you file watching, auto-rebuild, and CSS injection.
 ```shell
 $ gulp
 ```
+## WordPress modularization
+
+**WordPress theme files**
+
+- Reusable template parts, such as menus go to `/template-parts`
+- Individual parts go to `/templates`
+
+**WordPress styletheme modifications are added to the partials folders**
+
+If you are modifying a plugin's CSS, eg. GravityForms, simply:
+- Add a _gforms.scss file to partials
+- Add the import to partials/_index.scss
+- And head the _gforms.scss file with the appropriate selector
 
 ## Deployment
 - The Dev branch is automatically deployed to the Office Plus Dev environment
@@ -41,9 +52,6 @@ $ gulp
 - **Be sure to update the style.css with the version on new releases.**
 
 ## Features
-- Live reloading with BrowserSync
-- Image Minification
-- Github Pages deployment
 - Sass linting (based on [default](https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml) config)
 - Autoprefixer configuration
 - SMACSS and Atomic Design-based folder structure
@@ -52,100 +60,37 @@ $ gulp
 * Useful CSS helper classes.
 * Default print styles, performance optimized.
 * "Delete-key friendly." Easy to strip out parts you don't need.
-- Includes:
-  - [`Normalize.css`](https://necolas.github.com/normalize.css/)
-    for CSS normalizations and common bug fixes
-  - [`CSS Pesticide`](https://pesticide.io)
-    for easy CSS debugging
-  - [`jQuery`](https://jquery.com/) via CDN, with a local fallback
-  - [`Modernizr`](http://modernizr.com/), via CDN, for feature
-    detection
-  - [`Apache Server Configs`](https://github.com/h5bp/server-configs-apache)
-    that, among other, improve the web site's performance and security
 
 ## Dependencies
 ```
-  "browser-sync": "^2.0.0-rc4",
   "colors": "^1.1.2",
   "del": "^2.0.2",
   "gulp-autoprefixer": "^2.1.0",
-  "gulp-concat": "^2.4.3",
-  "gulp-gh-pages": "^0.4.0",
-  "gulp-imagemin": "^2.1.0",
-  "gulp-jshint": "^1.9.0",
-  "gulp-minify-css": "^0.3.12",
-  "gulp-minify-html": "^0.1.8",
-  "gulp-notify": "^2.2.0",
-  "gulp-plumber": "^0.6.6",
   "gulp-rename": "^1.2.0",
   "gulp-sass": "^1.3.2",
   "gulp-sass-lint": "1.0.1",
-  "gulp-size": "^1.2.0",
   "gulp-sourcemaps": "^1.5.2",
-  "gulp-uglify": "^1.0.2",
-  "imagemin-pngquant": "^4.0.0",
   "sassdoc": "^2.1.15",
   "vinyl-paths": "^2.0.0"
 ```
 
 ## Tasks
-- clean:dist
 - styles
-- browser-sync
-- deploy
-- js-app
-- js-libs
 - sass-lint
-- minify-html
 - watch
-- imagemin
-- stats
-- sassdoc
-- themes
 - default
-  - clean:dist
-  - browser-sync
-  - js-app
-  - js-libs
-  - imgmin
-  - minify-html
   - styles
   - watch
 - build
-  - clean:dist
-  - js-app
-  - js-libs
-  - imgmin
-  - minify-html
   - styles
-  - copy
-- audit
-  - sass-lint
-  - stats
 
-  ## Directory structure
+  ## SMACSS Directory structure
 
 ```
 ┌── .gitignore
-├── .htaccess
 ├── .sass-lint.yml
 ├── .travis.yml
-├── src
-│   ├── browserconfig.xml
-│   ├── crossdomain.xml
-│   ├── humans.txt
-│   ├── icons
-│   │   ├── apple-touch-icon-114x114-precomposed.png
-│   │   ├── apple-touch-icon-57x57-precomposed.png
-│   │   ├── apple-touch-icon-72x72-precomposed.png
-│   │   ├── apple-touch-icon-precomposed.png
-│   │   ├── apple-touch-icon.png
-│   │   ├── favicon.ico
-│   │   └── favicon.png
-│   ├── img
-│   ├── index.html
-│   ├── js
-│   ├── robots.txt
+├── lib
 │   └── scss
 │       ├── atoms
 │       │   └── _index.scss
@@ -164,6 +109,9 @@ $ gulp
 │       │   └── _index.scss
 │       ├── overrides
 │       │   └── _index.scss
+│       ├── partials
+│       │   └── _home.scss
+│       │   └── _index.scss
 │       ├── states
 │       │   ├── _index.scss
 │       │   └── _print.scss
@@ -178,8 +126,10 @@ $ gulp
 │       │   ├── _mixins.scss
 │       │   └── _typography.scss
 │       ├── styles.scss
+│       ├── styles.css
 │       └── _shame.scss
 ├── gulpfile.js
+├── README.md
 └── package.json
 ```
 

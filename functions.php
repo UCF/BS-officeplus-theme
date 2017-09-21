@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample.
+ * UCF Business Services
  *
- * This file adds functions to the Genesis Sample Theme.
+ * This file adds functions to the UCF Business Services Genesis Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package UCF Business Services Genesis 1.0
+ * @author  Mike Setzer
  * @license GPL-2.0+
- * @link    http://www.studiopress.com/
+ * @link    https://github.com/UCF/BS-WPTheme-Template
  */
 
 // Start the engine.
