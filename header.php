@@ -19,7 +19,8 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 
     <?php //Stylesheet imports ?> 
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/lib/styles.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/lib/scss/styles.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" type="text/css" media="screen" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /> 
 
     <?php //Font imports ?>
