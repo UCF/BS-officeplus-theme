@@ -18,9 +18,7 @@ This project includes a full setup of GulpJS and SASS for automation, and Jenkin
 - In terminal, `cd` to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter (on Macs).
 - In terminal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`. This should install all [dependencies](#dependencies).
 - In terminal, enter `gulp`.
-- Your browser should open at `http://localhost:3000`. You can access this same page on any device on the same wifi network and they'll see whats on your screen. It'll even sync scrolls and clicks!
-- Edit your code inside of the `src` folder.
-- Your complied and minified css, html, and javascript files will be created and updated in `dist/`. Never edit files within the `dist/` folder, as it gets deleted frequently.
+- Your SCSS files will be compiled and minified to `lib/styles.css`
 - Keep `gulp` running while you're making changes. When you want to stop the gulp task, hit `ctrl + C`.
 
 _For theming: add separate file (theme.scss) in`src/scss/themes/`, override the default `$theme` variable, and run `gulp themes`._
@@ -35,7 +33,12 @@ $ gulp
 ```
 ## WordPress modularization
 
-**All Wordpress theme modifications are added to the partials folders**
+**WordPress theme files**
+
+- Reusable template parts, such as menus go to `/template-parts`
+- Individual parts go to `/templates`
+
+**WordPress styletheme modifications are added to the partials folders**
 
 If you are modifying a plugin's CSS, eg. GravityForms, simply:
 - Add a _gforms.scss file to partials
