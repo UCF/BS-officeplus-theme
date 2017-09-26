@@ -45,7 +45,7 @@ If you are modifying a plugin's CSS, eg. GravityForms, simply:
 - Add the import to partials/_index.scss
 - And head the _gforms.scss file with the appropriate selector
 
-## Deployment
+## Deployment 
 - The Dev branch is automatically deployed to the Office Plus Dev environment
 - The Master branch is automatically deployed to the Office Plus QA environment
 - *Deployment to production is done manually via Jenkins using release versions*
