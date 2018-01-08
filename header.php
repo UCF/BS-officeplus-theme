@@ -34,4 +34,3 @@
 <div id="wrap">
 
     <?php get_template_part( 'lib/menu' ); ?>
-    
