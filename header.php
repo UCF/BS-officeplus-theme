@@ -42,3 +42,7 @@
 	
 	<?php get_template_part( 'template-parts/menu' ); ?>
 
+<<<<<<< HEAD
+=======
+    <?php get_template_part( 'lib/menu' ); ?>
+>>>>>>> a857fb4141d804a6e10ba324f9494757dd577f80
