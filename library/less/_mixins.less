@@ -1,0 +1,428 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features: 
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more. 
+
+******************************************************************/
+
+/*********************
+FIX IE7 INLINE-BLOCK
+*********************/
+.fixIE7 {
+	*display:inline;
+	*zoom:1;
+}
+
+/*********************
+CLEARFIXIN'
+*********************/
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+/*********************
+TOOLS
+*********************/
+
+* { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing:    border-box; 
+	box-sizing:         border-box; 
+}
+
+.image-replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.pseudo {
+	position: absolute;
+	content: '';
+	display: block;
+}
+
+.outer {
+	display: table;
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	.inner {
+		display: table-cell;
+		vertical-align: middle;
+		.text-center;
+		position: relative;
+		width: 100%;
+	}
+}
+
+.divider {
+	background: @darkgreen;
+	background: none;
+	width: 15px;
+	height: 1px;
+	margin: 17px 0;
+
+	&.grey-divider {
+		background: @grey2;
+	}
+
+	@media only screen and (min-width: 768px) {
+		margin: 28px 0;
+	}
+
+	@media only screen and (min-width: 960px) {
+		margin: 27px 0;
+	}
+}
+
+.alpha-list {
+	ul {
+		list-style-type: none;
+		overflow: hidden;
+
+		li {
+			padding-left: 35px;
+			line-height: 1.375;
+
+			&:before {
+				.pseudo;
+				left: 0;
+				.prox-bold;
+				color: #8a8a8a;
+			}
+
+			&:nth-child(1) {
+				&:before {
+					content: 'a.';
+				}
+			}
+
+			&:nth-child(2) {
+				&:before {
+					content: 'b.';
+				}
+			}
+
+			&:nth-child(3) {
+				&:before {
+					content: 'c.';
+				}
+			}
+
+			&:nth-child(4) {
+				&:before {
+					content: 'd.';
+				}
+			}
+
+			&:nth-child(5) {
+				&:before {
+					content: 'e.';
+				}
+			}
+
+			&:nth-child(6) {
+				&:before {
+					content: 'f.';
+				}
+			}
+
+			&:nth-child(7) {
+				&:before {
+					content: 'g.';
+				}
+			}
+		}
+	}
+}
+
+.no-padding-top { padding-top: 0 !important; }
+.no-padding-bottom { padding-bottom: 0 !important; }
+.no-margin-top { margin-top: 0 !important; }
+.big-max-width { max-width: 1320px !important; }
+.hide { display: none !important; }
+.always-pad { padding: 0 15px; }
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+.light-blue-bg { background: rgba( 105, 208, 198, 0.90 ); }
+*/
+.light-blue-bg { background: rgba( 105, 208, 198, 0.75 ); }
+
+@black:             #000;
+@white:             #fff;
+@grey: #e7e7e7;
+@grey2: #8a8a8a;
+@grey3: #434343;
+@grey4: #a9a9a9;
+@darkgreen: #254e48;
+@lightgreen: #cdfff8;
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
+@serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+
+/* text alignment */
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+
+.aaux-thin {
+	font-family: "aaux-next", sans-serif;
+	font-style: normal;
+	font-weight: 200;
+}
+
+.aaux-reg {
+	font-family: "aaux-next", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.aaux-med {
+	font-family: "aaux-next", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.aaux-bold {
+	font-family: "aaux-next", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.aaux-black {
+	font-family: "aaux-next", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+}
+
+.prox-light {
+	font-family: "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+.prox-reg {
+	font-family: "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.prox-reg-italic {
+	font-family: "proxima-nova", sans-serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.prox-med {
+	font-family: "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.prox-bold {
+	font-family: "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.prox-extrabold {
+	font-family: "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+}
+
+.brandon-thin {
+	font-family: "brandon-grotesque", sans-serif;
+	font-style: normal;
+	font-weight: 100;
+}
+
+.brandon-light {
+	font-family: "brandon-grotesque", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+.brandon-reg {
+	font-family: "brandon-grotesque", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.brandon-med {
+	font-family: "brandon-grotesque", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.brandon-bold {
+	font-family: "brandon-grotesque", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.aktiv-grotesk-light {
+	font-family: "aktiv-grotesk", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+.aktiv-grotesk-reg {
+	font-family: "aktiv-grotesk", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.aktiv-grotesk-bold {
+	font-family: "aktiv-grotesk", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+/*********************
+BORDER RADIUS
+*********************/
+
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .border-radius(4px); 
+
+*/
+.border-radius(@radius: 4px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/*********************
+BACKGROUND SIZE
+*********************/
+
+/*
+USAGE: .background-size(4px, 4px); 
+*/
+
+.background-size(@xpos: 0, @ypos: 0) {
+  -webkit-background-size: @xpos @ypos;
+     -moz-background-size: @xpos @ypos;
+          background-size: @xpos @ypos;
+}
+
+
+/*********************
+TRANISTION
+*********************/
+
+/* .transition(all,2s); */
+.transition(@what: all, @time: 0.2s, @transition: ease-in-out) {
+	-webkit-transition: @what @time @transition;
+	-moz-transition:    @what @time @transition;
+	-ms-transition:     @what @time @transition;
+	-o-transition:      @what @time @transition;
+	transition:         @what @time @transition;
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdo it.
+*********************/
+
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+.css-gradient(@from: #dfdfdf, @to: #f8f8f8) {
+	background-color: @to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+	background-image: -webkit-linear-gradient(top, @from, @to);
+	background-image: -moz-linear-gradient(top, @from, @to);
+	background-image: -o-linear-gradient(top, @from, @to);
+	background-image: linear-gradient(to bottom, @from, @to);
+}
+
+/*********************
+BOX SHADOW
+*********************/
+
+/* .boxShadow(0,0,4px,0,#444); */
+.boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) when (isnumber(@x)) {
+	-webkit-box-shadow: @x @y @radius @spread @color;
+	   -moz-box-shadow: @x @y @radius @spread @color;
+			box-shadow: @x @y @radius @spread @color; 
+}
+/* .boxShadow(none); */
+.boxShadow(@x: none) when (iskeyword(@x)) {
+	-webkit-box-shadow: @x;
+	   -moz-box-shadow: @x;
+			box-shadow: @x; 
+}
+
+/*********************
+OPACITY
+*********************/
+.opacity(@o: 0) {
+	-webkit-opacity: @o;
+	-moz-opacity: @o;
+	filter:alpha(opacity=@o);
+	opacity:@o;
+}
+
+/*********************
+PLACEHOLDER
+*********************/
+.placeholder(@c: #fff) {
+	&::-webkit-input-placeholder {
+		color: @c;
+	}
+	
+	&:-moz-placeholder { /* Firefox 18- */
+	   color: @c;  
+	}
+	
+	&::-moz-placeholder {  /* Firefox 19+ */
+	   color: @c;  
+	}
+	
+	&:-ms-input-placeholder {  
+	   color: @c;  
+	}
+}

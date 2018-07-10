@@ -1,0 +1,126 @@
+#footer {
+	position: relative;
+	width: 100%;
+	background: #252525;
+	padding: 30px;
+	bottom: 0;
+	margin-top: -320px;
+
+	.logo {
+		position: relative;
+		display: block;
+		width: 200px;
+		height: 44px;
+		margin-bottom: 18px;
+		background: url(../images/footer-logo.png) no-repeat center center;
+		.background-size(200px, 44px);
+	}
+
+	@media only screen and (min-width: 960px) {
+		height: 277px;
+		margin-top: -277px;
+
+		.logo {
+			width: 295px;
+			height: 65px;
+			margin-bottom: 0;
+			margin-top: -32px;
+			background: url(../images/footer-logo.png) no-repeat center center;
+			.background-size(295px, 65px);
+		}
+	}
+
+	.pull-right {
+		float: none;
+
+		@media only screen and (min-width: 960px) {
+			float: right;
+		}
+	}
+
+	.pull-left {
+		float: none;
+
+		@media only screen and (min-width: 960px) {
+			float: left;
+		}
+	}
+
+	.copy-text {
+		margin-top: 15px;
+
+		a {
+			color: @white;
+		}
+
+		@media only screen and (min-width: 960px) {
+			margin-top: 55px;
+		}
+
+		p {
+			.aktiv-grotesk-reg;
+			color: #7c7c7c;
+			line-height: 1.4em;
+			margin-top: 10px;
+			font-size: 12px;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 960px) {
+		padding: 65px 0 50px;
+	}
+
+	.up-arrow {
+		display: none;
+
+		@media only screen and (min-width: 960px) {
+			background: url(../images/up-arrow.png) no-repeat;
+			width: 21px;
+			height: 16px;
+			display: block;
+		}
+	}
+
+	.menu-wrap {
+		.menu {
+			li {
+				margin: 15px 0 0;
+
+				@media only screen and (min-width: 960px) {
+					margin: 0;
+					float: left;
+					margin-right: 60px;
+				}
+
+				a {
+					.prox-bold;
+					color: #f7f7f7;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	.copy-container {
+		@media only screen and (min-width: 960px) {
+			width: -o-calc(~'40% - 15px');
+			width: -moz-calc(~'40% - 15px');
+			width: -webkit-calc(~'40% - 15px');
+			width: calc(~'40% - 15px');
+		}
+	}
+
+	.link-container {
+		@media only screen and (min-width: 960px) {
+			width: -o-calc(~'60% - 15px');
+			width: -moz-calc(~'60% - 15px');
+			width: -webkit-calc(~'60% - 15px');
+			width: calc(~'60% - 15px');
+		}
+	}
+
+}

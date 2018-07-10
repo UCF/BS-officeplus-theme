@@ -1,0 +1,312 @@
+.btn {
+	position: relative;
+	display: block;
+	height: 64px;
+	line-height: 64px;
+	.prox-med;
+	font-size: 14px;
+	letter-spacing: 3px;
+	.uppercase;
+
+	@media only screen and (min-width: 960px) {
+		.transition();
+	}
+
+	&.w-arrow {
+		padding-left: 30px;
+		padding-right: 90px;
+		display: inline-block;
+		
+		&:before,
+		&:after {
+			.pseudo;
+			background: url(../images/btn-arrow.png) no-repeat;
+			.background-size( 26px, 19px );
+			top: 50%;
+			margin-top: -9.5px;
+			right: 23px;
+			width: 13px;
+			height: 19px;
+		}
+
+		&:before {
+			background-position: 0 0;
+		}
+
+		&:after {
+			background-position: -13px 0;
+		}
+
+		@media only screen and (min-width: 960px) {
+			&:before,
+			&:after {
+				.transition();
+			}
+		}
+
+	}
+
+	&.w-arrow.white-btn {
+		&:before {
+			opacity: 1;
+		}
+
+		&:after {
+			opacity: 0;
+		}
+
+		@media only screen and (min-width: 960px) {
+			&:hover {
+				&:before {
+					opacity: 0;
+				}
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.w-arrow.green-btn {
+		&:before {
+			opacity: 0;
+		}
+
+		&:after {
+			opacity: 1;
+		}
+
+		@media only screen and (min-width: 960px) {
+			&:hover {
+				&:before {
+					opacity: 1;
+				}
+
+				&:after {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+.green-btn {
+	background: #6cc0b4;
+	border: 1px solid #6cc0b4;
+	color: @white !important;
+
+	@media only screen and (min-width: 960px) {
+		&:hover {
+			color: #6cc0b4 !important;
+			background: transparent;
+			border: 1px solid #6cc0b4;
+		}
+	}
+}
+
+a.white-btn {
+	color: #6cc0b4;
+}
+
+.white-btn {
+	position: relative;
+	background: @white;
+	display: block;
+	color: #6cc0b4;
+	border: 1px solid @white;
+	.text-center;
+
+	@media only screen and (min-width: 960px) {
+		&:hover {
+			color: @white;
+			background: transparent;
+		}
+	}
+
+	&.report {
+		@media only screen and (min-width: 960px) {
+			padding-left: 65px;
+			.text-left;
+
+			&:after,
+			&:before {
+				.pseudo;
+				background: url(../images/report-sprite.png);
+				.background-size( 42px, 27px );
+				width: 21px;
+				height: 27px;
+				top: 50%;
+				margin-top: -13.5px;
+				left: 22px;
+				.transition();
+			}
+
+			&:after {
+				background-position: 0 0;
+				opacity: 0;
+			}
+
+			&:before {
+				background-position: -21px 0;
+				opacity: 1;
+			}
+
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+
+				&:before {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&.work-order {
+		padding: 0 30px;
+
+		@media only screen and (min-width: 960px) {
+			padding: 0;
+			padding-left: 65px;
+			padding-right: 40px;
+			.text-left;
+
+			&:after,
+			&:before {
+				.pseudo;
+				background: url(../images/work-order-sprite.png);
+				.background-size( 44px, 27px );
+				width: 22px;
+				height: 27px;
+				top: 50%;
+				margin-top: -13.5px;
+				left: 22px;
+				.transition();
+			}
+
+			&:after {
+				background-position: -22px 0;
+				opacity: 0;
+			}
+
+			&:before {
+				background-position: 0 0;
+				opacity: 1;
+			}
+
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+
+				&:before {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&.special-dl {
+		overflow: hidden;
+		height: auto;
+		width: 100%;
+		margin: 0 4px 10px 4px !important;
+		padding: 12px 10px 11px 10px !important;
+		line-height: 1.1em;
+		letter-spacing: 2px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+
+		@media only screen and (min-width: 768px) {
+			width: 48%;
+		}
+	}
+
+	&.chart {
+		@media only screen and (min-width: 960px) {
+			padding-left: 65px;
+			.text-left;
+
+			&:after,
+			&:before {
+				.pseudo;
+				background: url(../images/chart-sprite.png);
+				.background-size( 58px, 29px );
+				width: 29px;
+				height: 29px;
+				top: 50%;
+				margin-top: -14.5px;
+				left: 22px;
+				.transition();
+			}
+
+			&:after {
+				background-position: -29px 0;
+				opacity: 0;
+			}
+
+			&:before {
+				background-position: 0 0;
+				opacity: 1;
+			}
+
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+
+				&:before {
+					opacity: 0;
+				}
+			}
+		}
+
+	}
+	
+}
+
+.fence-btn {
+	position: relative;
+	background: #6cc0b4;
+	height: 87px;
+	line-height: 87px;
+	display: inline-block;
+	.text-center;
+	font-size: 16px;
+	.prox-bold;
+	margin-top: 15px;
+	color: @white !important;
+	padding: 0 30px;
+	margin-bottom: 15px;
+
+	&.alternate {
+		height: auto;
+		line-height: 1.5em;
+		padding: 30px;
+	}
+
+	@media only screen and (min-width: 768px) {
+		padding: 0 60px;
+	}
+
+	&:before,
+	&:after {
+		.pseudo;
+		height: 15px;
+		width: 100%;
+		left: 0;
+	}
+
+	&:before {
+		top: -15px;
+		background: url(../images/top-fence-border.png) repeat-x;
+	}
+
+	&:after {
+		bottom: -15px;
+		background: url(../images/bottom-fence-border.png) repeat-x;
+	}
+
+}
