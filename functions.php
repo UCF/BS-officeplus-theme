@@ -91,13 +91,6 @@ function spry_print_scripts() {
 		wp_enqueue_script( 'ucfhb', '//universityheader.ucf.edu/bar/js/university-header.js', array( 'jquery' ) );
 	}
 
-	wp_enqueue_script( 'infobubble' );
-
-	if ( get_page_template( 'template-contact.php' ) ) {
-		wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB6IftJIbhuHExsKKkPqARDNmkp3kZKhS4', array( 'jquery' ) );
-		wp_enqueue_script( 'contact-js', THEME_URL . '/library/js/contact.js', array( 'jquery' ) );
-	}
-
 }
 
 #	General Functions
