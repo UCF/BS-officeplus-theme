@@ -3,8 +3,8 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)
 
 # Business Services Office Plus WordPress theme
-Repository for officeplus.ucf.edu WordPress theme build, created by Mike Setzer, maintained by Business Services.
-This project includes a full setup of GulpJS and SASS for automation, and Jenkins for deployment.
+Repository for OfficePlus.ucf.edu WordPress theme build, created by Mike Setzer, maintained by Business Services.
+This project includes a full setup of GruntJS and LESS for automation, and Jenkins for deployment.
 
 ## System Preparation
 1. [NodeJS](http://nodejs.org) - Use the installer.

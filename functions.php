@@ -11,7 +11,7 @@ if(!defined('THEME_URL'))
 //require_once( TEMPLATEPATH.'/library/includes/mysql-replace.php' );
 //MySQL_Replace::replace('old', 'new');
 
-//	dependicies
+//	dependencies
 require_once( TEMPLATEPATH.'/library/includes/wp-header-remove.php' );
 
 //	menus
@@ -126,3 +126,59 @@ function links_shortcode( $atts ) {
 	
 }
 add_shortcode( 'job_links', 'links_shortcode' );
+
+// =- =- =- =- -= =- =- =- -= =- =- =- -=
+//	Faq - Post Type
+// =- =- =- =- =- =- =- =- -= =- =- =- -=*/
+add_action( 'init', 'register_faq_post_type' );
+function register_faq_post_type() {
+    $labels = array(
+        'name' => __("FAQs"),
+        'singular_name' => __('FAQ'),
+        'add_new_item' => __('Add New FAQ'),
+        'edit_item' => __('Edit FAQ')
+    );
+    $args = array(
+        'labels'             	=> $labels,
+        'public'             	=> true,
+        'publicly_queryable' 	=> true,
+        'show_ui'				=> true,
+        'show_in_menu'			=> true,
+        'query_var'         	=> true,
+        'capability_type'   	=> 'post',
+        'has_archive'       	=> true,
+        'hierarchical'      	=> true,
+        'menu_position'     	=> null,
+        'supports'         	 	=> array( 'title', 'editor')
+    );
+
+    register_post_type( 'ucf_faqs', $args );
+}
+
+// =- =- =- =- -= =- =- =- -= =- =- =- -=
+//	Faq Category - Taxonomy
+// =- =- =- =- =- =- =- =- -= =- =- =- -=*/
+add_action('init', 'register_faq_category_taxonomy');
+function register_faq_category_taxonomy() {
+
+    $taxonomy = 'faq_category';
+    $object_type = 'ucf_faqs';
+
+    $labels = array(
+        'name'             	=> __('Faq Category'),
+        'singular_name'     => __('Faq Category'),
+        'edit_item'         => __('Edit Faq Category'),
+        'add_new_item'		=> __('Add Faq Category')
+    );
+
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => false,
+        'rewrite'           => array('slug' => 'faq_category'),
+    );
+
+    register_taxonomy($taxonomy, $object_type, $args);
+}

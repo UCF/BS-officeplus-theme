@@ -1,25 +1,28 @@
 <?php get_header(); ?>
 
-	<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
-	
-		<div class="container">
+<?php get_template_part( 'section', 'office-plus-menu' ); ?>
 
-			<main id="content">
+    <section id="content" class="main-page-template">
 
-				<section class="slider-section">
+        <div class="center">
 
-					<div class="container page-container always-pad">
-						
-						<?php the_content(); ?>
+            <div class="formatted">
 
-					</div>
+                <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
-				</section>
-			
-			</main>
+                <div id="office-plus-wrap">
 
-		</div>
 
-	<?php endwhile; endif; ?>
+                    <?php the_content(); ?>
 
-<?php get_footer(); ?>
+                    <?php endwhile; endif; ?>
+
+                </div>
+
+            </div>
+
+    </section>
+
+<?php //end content ?>
+
+<?php get_template_part( 'section', 'office-plus-footer' ); ?>
