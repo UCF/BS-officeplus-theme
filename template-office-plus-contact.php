@@ -142,7 +142,9 @@ Template Name: Office Plus Contact
 
         <?php } ?>
 
-        <?php get_template_part( 'section', 'office-plus-create-account' ); ?>
-        <?php get_template_part( 'section', 'office-plus-footer' ); ?>
-
     </div>
+
+<?php endwhile; endif; ?>
+
+<?php get_template_part( 'section', 'office-plus-create-account' ); ?>
+<?php get_template_part( 'section', 'office-plus-footer' ); ?>
