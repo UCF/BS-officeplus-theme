@@ -64,11 +64,6 @@ Template Name: Office Plus Contact
 
                         <ul class="faq-list">
 
-                            <?php
-
-                                $faq_cats = get_terms( 'faq_category' );
-
-                                foreach ( $faq_cats as $faq_cat ) { ?>
                                 <li>
 
                                     <?php
@@ -103,7 +98,6 @@ Template Name: Office Plus Contact
                                         </ul>
 
                                     </li>
-                                 <?php } ?>
                         </ul>
 
                         <div class="clear"></div>
