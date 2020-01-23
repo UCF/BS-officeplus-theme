@@ -96,7 +96,7 @@ Template Name: Office Plus Create Account
 
         <?php } ?>
 
+        <?php get_template_part( 'section', 'office-plus-footer' ); ?>
+
 
     </div>
-
-    <?php get_template_part( 'section', 'office-plus-footer' ); ?>

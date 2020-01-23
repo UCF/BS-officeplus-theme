@@ -74,7 +74,6 @@ Template Name: Office Plus Home*/ ?>
         <?php } ?>
 
         <?php get_template_part( 'section', 'office-plus-create-account' ); ?>
+        <?php get_template_part( 'section', 'office-plus-footer' ); ?>
 
     </div>
-
-<?php get_template_part( 'section', 'office-plus-footer' ); ?>
