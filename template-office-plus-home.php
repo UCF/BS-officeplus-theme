@@ -18,7 +18,7 @@ Template Name: Office Plus Home*/ ?>
 
             <section class="cta">
 
-                <div class="cta-section" style="background: url(<?php echo get_field( 'cta_image' ); ?>) no-repeat; background-position: center; background-size: cover;">
+                <div class="cta-section" style="background: url(<?php the_field( 'cta_image' ); ?>) no-repeat; background-position: center; background-size: cover;">
 
                     <div class="outer">
 
