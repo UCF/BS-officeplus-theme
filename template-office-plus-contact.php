@@ -15,7 +15,7 @@ Template Name: Office Plus Contact
 
         =- =- =- =- =- =- =- =- =- =- =- */ ?>
 
-        <?php if ( get_field( 'header_image' ) { ?>
+        <?php if ( get_field( 'header_image' ) ) { ?>
 
             <section class="cta">
 
