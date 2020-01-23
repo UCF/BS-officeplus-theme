@@ -40,7 +40,7 @@
                 <div class="icon-wrap">
 
                     <div class="logo-container">
-                        <a href="<?php echo get_bloginfo( 'url'); ?>" class="card-services-logo"></a>
+                        <a href="<?php echo get_bloginfo( 'url'); ?>" class="office-plus-logo"></a>
                     </div>
 
                     <div class="divider"></div>

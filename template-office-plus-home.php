@@ -1,6 +1,5 @@
 <?php /*
-Template Name: Office Plus Home
-*/ ?>
+Template Name: Office Plus Home*/ ?>
 
 <?php get_header(); ?>
 
