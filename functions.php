@@ -87,10 +87,6 @@ function spry_print_scripts() {
 		'themeUrl' => THEME_URL
 	) );
 
-	if ( !smc_is_login_page() ) {
-		wp_enqueue_script( 'ucfhb', '//universityheader.ucf.edu/bar/js/university-header.js', array( 'jquery' ) );
-	}
-
 }
 
 #	General Functions
