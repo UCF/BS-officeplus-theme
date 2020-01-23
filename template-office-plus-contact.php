@@ -52,8 +52,6 @@ Template Name: Office Plus Contact
 
 			=- =- =- =- =- =- =- =- =- =- =- */ ?>
 
-        <?php if (get_field( 'body_section_title' ) && get_field( 'body_section_content_1' ) ) { ?>
-
         <section class="off-white-section">
 
             <div class="body-container">
@@ -139,8 +137,6 @@ Template Name: Office Plus Contact
 
         </section>
         <div class="clear"></div>
-
-        <?php } ?>
 
     </div>
 
