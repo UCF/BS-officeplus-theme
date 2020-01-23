@@ -2,7 +2,7 @@
 
     <div id="desktop-menu">
         <div class="logo-container">
-            <a href="<?php echo get_bloginfo ( 'url' ); ?>" class=""office-plus-logo"></a>
+            <a href="<?php echo get_bloginfo ( 'url' ); ?>" class="office-plus-logo"></a>
         </div>
 
         <div class="right-container">
