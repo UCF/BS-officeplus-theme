@@ -1,5 +1,5 @@
 <?php /*
-Template Name: Office Plus Contact
+Template Name: Office Plus Create Account
 */ ?>
 
 <?php get_header(); ?>
