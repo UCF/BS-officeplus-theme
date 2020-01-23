@@ -65,36 +65,45 @@ Template Name: Office Plus Contact
                         <ul class="faq-list">
 
                             <?php
-                                /* FAQ Arguments */
-                                $faq_args = array(
-                                    'post_type' => 'ucf_faqs',
-                                    'posts_per_page' => -1,
-                                    'order' => 'ASC',
-                                    'orderby' => 'ID',
-                                    'post_status' => 'publish',
-                                    'tax_query' => array(
-                                        array(
-                                            'taxonomy' => 'faq_category',
-                                            'field'    => 'term_id',
-                                            'terms'    => $faq_cat->term_id
-                                        )
-                                    )
-                                );
 
-                                $faqs = get_posts( $faq_args );
-                                $faq_counter = 1;
-                                $total_faqs = wp_count_posts( 'ucf_faqs' ); ?>
+                                $faq_cats = get_terms( 'faq_category' );
 
-                                <ul>
-                                    <?php foreach ( $faqs as $faq ) { ?>
-                                        <li>
-                                            <a class="faq-link" href="#" data-faq-num="<?php echo $faq->ID; ?>"><?php echo $faq->post_title; ?></a>
+                                foreach ( $faq_cats as $faq_cat ) { ?>
+                                <li>
 
-                                            <div class="faq-info"><?php echo wpautop( $faq->post_content ); ?></div>
-                                        </li>
-                                    <?php } ?>
-                                </ul>
+                                    <?php
+                                        /* FAQ Arguments */
+                                        $faq_args = array(
+                                            'post_type' => 'ucf_faqs',
+                                            'posts_per_page' => -1,
+                                            'order' => 'ASC',
+                                            'orderby' => 'ID',
+                                            'post_status' => 'publish',
+                                            'tax_query' => array(
+                                                array(
+                                                    'taxonomy' => 'faq_category',
+                                                    'field'    => 'term_id',
+                                                    'terms'    => $faq_cat->term_id
+                                                )
+                                            )
+                                        );
 
+                                        $faqs = get_posts( $faq_args );
+                                        $faq_counter = 1;
+                                        $total_faqs = wp_count_posts( 'ucf_faqs' ); ?>
+
+                                        <ul>
+                                            <?php foreach ( $faqs as $faq ) { ?>
+                                                <li>
+                                                    <a class="faq-link" href="#" data-faq-num="<?php echo $faq->ID; ?>"><?php echo $faq->post_title; ?></a>
+
+                                                    <div class="faq-info"><?php echo wpautop( $faq->post_content ); ?></div>
+                                                </li>
+                                            <?php } ?>
+                                        </ul>
+
+                                    </li>
+                                 <?php } ?>
                         </ul>
 
                         <div class="clear"></div>
