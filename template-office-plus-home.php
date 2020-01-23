@@ -14,7 +14,7 @@ Template Name: Office Plus Home*/ ?>
 
         =- =- =- =- =- =- =- =- =- =- =- */ ?>
 
-        <?php if ( get_field( 'header_image' ) ) { ?>
+        <?php if ( get_field( 'cta_image' ) ) { ?>
 
             <section class="cta">
 

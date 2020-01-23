@@ -15,7 +15,7 @@ Template Name: Office Plus Create Account
 
         =- =- =- =- =- =- =- =- =- =- =- */ ?>
 
-        <?php if ( get_field( 'header_image' ) ) { ?>
+        <?php if ( get_field( 'cta_image' ) ) { ?>
 
         <section class="cta">
 
