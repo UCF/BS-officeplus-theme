@@ -35,7 +35,6 @@ em {
 
 #office-plus-wrap {
 	position: relative;
-	margin-top: 80px;
 	z-index: 50;
 }
 
@@ -673,6 +672,9 @@ p {
 	}
 
 	#mobile-menu {
+		@media screen and (max-width: 960px){
+			display:none;
+		}
 		position: relative;
 		height: 100%;
 
@@ -683,127 +685,6 @@ p {
 		.logo-container {
 			float: left;
 		}
-
-		.hamburger-container {
-			position: relative;
-			float: right;
-			height: 40px;
-
-			.hamburger {
-				position: relative;
-				background: url(../images/hamburger-sprite.png) no-repeat;
-				width: 32px;
-				height: 17px;
-				display: block;
-
-				&.close {
-					background-position: 0 -25px;
-					.background-size(50px, 50px);
-					width: 24px;
-					height: 25px;
-				}
-
-			}
-
-		}
-
-		#actual-mobile-menu {
-			position: absolute;
-			top: 0;
-			width: 70%;
-			max-width: 233px;
-			height: 100vh;
-			background: #2f3230;
-			left: -1000px;
-			//.transition( all, 0.35s );
-
-			&.active {
-				left: 0;
-			}
-
-			.logo-container {
-				float: none;
-				margin-bottom: 45px;
-			}
-
-			.mobile-menu-inner-container {
-				width: 153px;
-				margin: 40px auto 0;
-				overflow: hidden;
-
-				.divider {
-					background: #414542;
-					width: 133px;
-					height: 2px;
-					margin-bottom: 15px;
-
-					&.second {
-						margin-top: 30px;
-					}
-
-				}
-
-			}
-
-			.menu {
-
-				li {
-					margin-top: 30px;
-
-					&:first-child {
-						margin-top: 0;
-					}
-
-					a {
-						color: #FFF;
-						.montserrat-reg;
-						font-size: 13px;
-					}
-
-				}
-
-			}
-
-			.log-in-link,
-			.lost-card-link {
-				color: #FFF;
-				.border-radius(20px);
-				padding: 10px 20px;
-				.montserrat-bold;
-				font-size: 13px;
-				display: inline-block;
-			}
-
-			.log-in-link {
-				position: relative;
-				background: #ffc100;
-				border: 2px solid #ffc100;
-				margin: 15px 0 20px 0;
-
-				.log-in {
-					position: relative;
-					display: inline-block;
-					padding-left: 20px;
-
-					&:before {
-						.pseudo;
-						background: url(../images/log-in-cash-icon.png) no-repeat;
-						width: 12px;
-						height: 16px;
-						left: 0;
-						top: 50%;
-						margin-top: -8px;
-					}
-				}
-
-			}
-
-			.lost-card-link {
-				border: 2px solid #FFF;
-			}
-
-		}
-
 
 	}
 

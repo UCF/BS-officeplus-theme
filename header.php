@@ -62,19 +62,6 @@
 
 <body <?php body_class(); ?>>
 
-<article id="the-modal" style="display: none">
-
-    <div id="fancybox-content"></div>
-
-</article>
-
-
-<div class="popup-overlay" style="display: none;"></div>
-
-<div id="Popup" style="display: none;">
-    <div class="center-pad"></div>
-</div>
-
 <article id="wrap">
 
     <?php get_template_part( 'section', 'office-plus-header' ); ?>
