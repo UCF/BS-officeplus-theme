@@ -1,65 +1,54 @@
 {
   "name": "bs-officeplus-theme",
-  "description": "Package for Office Plus theme",
-  "main": "gulpfile.js",
+  "version": "1.0.0",
+  "description": "[![forthebadge](https://forthebadge.com/images/badges/built-with-wordpress.svg)](http://forthebadge.com) \r [![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](http://forthebadge.com)\r [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)",
+  "main": "gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.0",
-  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/UCF/BS-officeplus-theme.git"
+    "url": "git+https://github.com/UCF/BS-officeplus-theme.git"
   },
   "keywords": [
     "officeplus",
-    "gulp",
-    "sass",
     "UCF",
+    "grunt",
     "business",
     "services",
-    "business services",
-    "mike setzer",
+    "business",
+    "services",
+    "ucf",
+    "officeplus",
+    "office",
+    "plus",
+    "mike",
     "setzer",
-    "sass",
-    "scss",
-    "doc",
-    "smacss"
+    "setzer",
+    "less"
   ],
   "author": {
     "name": "Mike Setzer",
     "url": "https://github.com/mikesetzer/"
   },
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/UCF/BS-officeplus-theme/issues"
   },
   "homepage": "https://github.com/UCF/BS-officeplus-theme#readme",
   "dependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "jit-grunt": "^0.10.0",
     "jshint": "^2.9.5"
   },
   "devDependencies": {
     "browser-sync": "^2.0.0-rc4",
     "colors": "^1.1.2",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.8.0",
-    "gulp-concat": "^2.4.3",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-jshint": "^2.0.4",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-lint": "1.3.3",
-    "gulp-size": "^2.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
-    "imagemin-pngquant": "^5.0.1",
+    "imagemin-pngquant": "^8.0.0",
     "run-sequence": "^2.1.0",
-    "sassdoc": "^2.1.15",
     "vinyl-paths": "^2.0.0"
   }
 }
