@@ -22,12 +22,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
 
-    <!--
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/reset.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/style.css" type="text/css" media="screen" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/skins/flat/yellow.css" type="text/css" media="screen" />
-    -->
+
 
     <!--[if lt IE 9]>
     <script src="<?php echo THEME_URL.'/library/js/css3-mediaqueries.min.js'; ?>"></script>
@@ -39,26 +38,19 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
     <?php /* Favicon */ ?>
-    <!--
     <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/library/images/favicon.ico" />
-    -->
 
-    <!--
     <?php /* jQuery UI */ ?>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/jqueryui/jquery-ui.min.css" type="text/css" media="screen" />
-    -->
 
-    <!--
+
     <?php /* FancyBox */ ?>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-    -->
 
-    <!--
     <?php /* FancySelect */ ?>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancyselect/fancySelect.css" type="text/css" media="screen" />
-    -->
 
     <?php /* Typekit */ ?>
     <script src="//use.typekit.net/ahs4vma.js"></script>
@@ -70,7 +62,20 @@
 
 <body <?php body_class(); ?>>
 
+<article id="the-modal" style="display: none">
+
+    <div id="fancybox-content"></div>
+
+</article>
+
+
+<div class="popup-overlay" style="display: none;"></div>
+
+<div id="Popup" style="display: none;">
+    <div class="center-pad"></div>
+</div>
+
 <article id="wrap">
 
-    <?php get_template_part( 'section', 'card-services-header' ); ?>
+    <?php get_template_part( 'section', 'office-plus-header' ); ?>
 

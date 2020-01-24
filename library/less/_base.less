@@ -13,6 +13,7 @@ html, body {
 
 body {
 	font-size: 14px;
+	margin: 0;
 }
 
 strong {
@@ -651,14 +652,14 @@ p {
 
 		.office-plus-logo {
 			background: url(../images/office-plus-logo.png) no-repeat;
-			width: 104px;
-			height: 40px;
+			width: 265px;
+			height: 77px;
 			display: block;
 
 			&.big {
 				background: url(../images/office-plus-logo.png) no-repeat;
-				width: 134px;
-				height: 52px;
+				width: 265px;
+				height: 77px;
 			}
 
 		}
@@ -666,7 +667,9 @@ p {
 	}
 
 	#desktop-menu {
-		display: none;
+		@media screen and (min-width: 960px){
+			display: block;
+		}
 	}
 
 	#mobile-menu {
