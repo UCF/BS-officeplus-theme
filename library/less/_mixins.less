@@ -51,23 +51,6 @@ TOOLS
 	overflow: hidden;
 }
 
-.pull-left { float: left; }
-.pull-right { float: right; }
-
-.overlay {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.pseudo {
-	position: absolute;
-	content: '';
-	display: block;
-}
-
 .outer {
 	display: table;
 	position: relative;
@@ -83,240 +66,122 @@ TOOLS
 	}
 }
 
-.divider {
-	background: @darkgreen;
-	background: none;
-	width: 15px;
-	height: 1px;
-	margin: 17px 0;
-
-	&.grey-divider {
-		background: @grey2;
-	}
-
-	@media only screen and (min-width: 768px) {
-		margin: 28px 0;
-	}
-
-	@media only screen and (min-width: 960px) {
-		margin: 27px 0;
-	}
+.center-pad {
+	padding: 0 15px;
 }
 
-.alpha-list {
-	ul {
-		list-style-type: none;
-		overflow: hidden;
-
-		li {
-			padding-left: 35px;
-			line-height: 1.375;
-
-			&:before {
-				.pseudo;
-				left: 0;
-				.prox-bold;
-				color: #8a8a8a;
-			}
-
-			&:nth-child(1) {
-				&:before {
-					content: 'a.';
-				}
-			}
-
-			&:nth-child(2) {
-				&:before {
-					content: 'b.';
-				}
-			}
-
-			&:nth-child(3) {
-				&:before {
-					content: 'c.';
-				}
-			}
-
-			&:nth-child(4) {
-				&:before {
-					content: 'd.';
-				}
-			}
-
-			&:nth-child(5) {
-				&:before {
-					content: 'e.';
-				}
-			}
-
-			&:nth-child(6) {
-				&:before {
-					content: 'f.';
-				}
-			}
-
-			&:nth-child(7) {
-				&:before {
-					content: 'g.';
-				}
-			}
-		}
-	}
+.no-margin-bottom {
+	margin-bottom: 0 !important;
 }
 
-.no-padding-top { padding-top: 0 !important; }
-.no-padding-bottom { padding-bottom: 0 !important; }
-.no-margin-top { margin-top: 0 !important; }
-.big-max-width { max-width: 1320px !important; }
-.hide { display: none !important; }
-.always-pad { padding: 0 15px; }
+.no-margin-top {
+	margin-top: 0 !important;
+}
+
+.no-margin-left {
+	margin-left: 0 !important;
+}
+
+.no-margin-right {
+	margin-right: 0 !important;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
 
 /*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
-/*
-.light-blue-bg { background: rgba( 105, 208, 198, 0.90 ); }
-*/
-.light-blue-bg { background: rgba( 105, 208, 198, 0.75 ); }
 
-@black:             #000;
-@white:             #fff;
-@grey: #e7e7e7;
-@grey2: #8a8a8a;
-@grey3: #434343;
-@grey4: #a9a9a9;
-@darkgreen: #254e48;
-@lightgreen: #cdfff8;
+@gold:             	#ffc000;
+
+@dark-gray: 		#29343b;
+
+@blue: 			#00a8e2;
+
+@gray-90: 		rgba(51,65,74,.9);
+
+@gray: 			#33414a;
+@gray2: 			#29343b;
+
+@gray-30: 		rgba(41,52,59,.3);
+@gray-50: 		rgba(41,52,59,.3);
+
+@gray-bar: 		rgba(51,65,74,.9);
+
+@black1: 			#191d2b;
+@black2: 			#30363a;
+@light-blue: 		#e7ebef;
 
 /*********************
 TYPOGRAPHY
 *********************/
 
-@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
-@serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+.effra-bold {
+	font-family: "effra-n7","effra",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.effra-reg {
+	font-family: "effra-n4","effra",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.fut-book {
+	font-family: "futura-pt-n4","futura-pt",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.fut-heavy {
+	font-family: "futura-pt-n7","futura-pt",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+.merri-reg {
+	font-family: "merriweather-n4","merriweather",serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.merri-ital {
+	font-family: "merriweather-i4","merriweather",serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.montserrat-reg {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+.montserrat-bold {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.kepler-reg {
+	font-family: "kepler-std", "kepler-std-n4", serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.kepler-italic {
+	font-family: "kepler-std", "kepler-std-i4", serif;
+	font-style: italic;
+	font-weight: 400;
+}
 
 /* text alignment */
 .text-left   { text-align: left; }
 .text-center { text-align: center; }
 .text-right  { text-align: right; }
-.uppercase { text-transform: uppercase; }
-.lowercase { text-transform: lowercase; }
-
-.aaux-thin {
-	font-family: "aaux-next", sans-serif;
-	font-style: normal;
-	font-weight: 200;
-}
-
-.aaux-reg {
-	font-family: "aaux-next", sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-
-.aaux-med {
-	font-family: "aaux-next", sans-serif;
-	font-style: normal;
-	font-weight: 500;
-}
-
-.aaux-bold {
-	font-family: "aaux-next", sans-serif;
-	font-style: normal;
-	font-weight: 700;
-}
-
-.aaux-black {
-	font-family: "aaux-next", sans-serif;
-	font-style: normal;
-	font-weight: 800;
-}
-
-.prox-light {
-	font-family: "proxima-nova", sans-serif;
-	font-style: normal;
-	font-weight: 300;
-}
-
-.prox-reg {
-	font-family: "proxima-nova", sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-
-.prox-reg-italic {
-	font-family: "proxima-nova", sans-serif;
-	font-style: italic;
-	font-weight: 400;
-}
-
-.prox-med {
-	font-family: "proxima-nova", sans-serif;
-	font-style: normal;
-	font-weight: 500;
-}
-
-.prox-bold {
-	font-family: "proxima-nova", sans-serif;
-	font-style: normal;
-	font-weight: 700;
-}
-
-.prox-extrabold {
-	font-family: "proxima-nova", sans-serif;
-	font-style: normal;
-	font-weight: 800;
-}
-
-.brandon-thin {
-	font-family: "brandon-grotesque", sans-serif;
-	font-style: normal;
-	font-weight: 100;
-}
-
-.brandon-light {
-	font-family: "brandon-grotesque", sans-serif;
-	font-style: normal;
-	font-weight: 300;
-}
-
-.brandon-reg {
-	font-family: "brandon-grotesque", sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-
-.brandon-med {
-	font-family: "brandon-grotesque", sans-serif;
-	font-style: normal;
-	font-weight: 500;
-}
-
-.brandon-bold {
-	font-family: "brandon-grotesque", sans-serif;
-	font-style: normal;
-	font-weight: 700;
-}
-
-.aktiv-grotesk-light {
-	font-family: "aktiv-grotesk", sans-serif;
-	font-style: normal;
-	font-weight: 300;
-}
-
-.aktiv-grotesk-reg {
-	font-family: "aktiv-grotesk", sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
-
-.aktiv-grotesk-bold {
-	font-family: "aktiv-grotesk", sans-serif;
-	font-style: normal;
-	font-weight: 700;
-}
 
 /*********************
 BORDER RADIUS
@@ -349,7 +214,6 @@ USAGE: .background-size(4px, 4px);
           background-size: @xpos @ypos;
 }
 
-
 /*********************
 TRANISTION
 *********************/
@@ -363,66 +227,68 @@ TRANISTION
 	transition:         @what @time @transition;
 }
 
-/*********************
-CSS3 GRADIENTS
-Be careful with these since they can 
-really slow down your CSS. Don't overdo it.
-*********************/
 
-/* .css-gradient(#dfdfdf,#f8f8f8); */
-.css-gradient(@from: #dfdfdf, @to: #f8f8f8) {
-	background-color: @to;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
-	background-image: -webkit-linear-gradient(top, @from, @to);
-	background-image: -moz-linear-gradient(top, @from, @to);
-	background-image: -o-linear-gradient(top, @from, @to);
-	background-image: linear-gradient(to bottom, @from, @to);
+
+/*********************
+ Pseudo
+*********************/
+.pseudo {
+	content: '';
+	display: block;
+	position: absolute;
 }
 
 /*********************
-BOX SHADOW
+ Stretch
 *********************/
-
-/* .boxShadow(0,0,4px,0,#444); */
-.boxShadow(@x: 0, @y: 0, @radius: 4px, @spread: 0, @color: rgba(0,0,0,0.5)) when (isnumber(@x)) {
-	-webkit-box-shadow: @x @y @radius @spread @color;
-	   -moz-box-shadow: @x @y @radius @spread @color;
-			box-shadow: @x @y @radius @spread @color; 
-}
-/* .boxShadow(none); */
-.boxShadow(@x: none) when (iskeyword(@x)) {
-	-webkit-box-shadow: @x;
-	   -moz-box-shadow: @x;
-			box-shadow: @x; 
+.stretch {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 
-/*********************
-OPACITY
-*********************/
-.opacity(@o: 0) {
-	-webkit-opacity: @o;
-	-moz-opacity: @o;
-	filter:alpha(opacity=@o);
-	opacity:@o;
+/* =- -= =- -= =- -= =--= =- 
+
+	Dat Ease!!!
+
+=- -= =--= =- -= = --= =- -= =- */
+
+@cubes1: .17,.92,.66,.97; // slow out
+@cubes2: 1.000, 0.360, 0.540, 0.930; // slow in
+
+.ease1 {
+	-webkit-transition: all 400ms cubic-bezier(@cubes1); 
+	   -moz-transition: all 400ms cubic-bezier(@cubes1); 
+	     -o-transition: all 400ms cubic-bezier(@cubes1); 
+	        transition: all 400ms cubic-bezier(@cubes1); /* custom */
+
+	-webkit-transition-timing-function: cubic-bezier(@cubes1); 
+	   -moz-transition-timing-function: cubic-bezier(@cubes1); 
+	     -o-transition-timing-function: cubic-bezier(@cubes1); 
+	        transition-timing-function: cubic-bezier(@cubes1); /* custom */
 }
 
-/*********************
-PLACEHOLDER
-*********************/
-.placeholder(@c: #fff) {
-	&::-webkit-input-placeholder {
-		color: @c;
-	}
-	
-	&:-moz-placeholder { /* Firefox 18- */
-		color: @c;
-	}
-	
-	&::-moz-placeholder { /* Firefox 18+ */
-		color: @c;
-	}
-	
-	&:-ms-input-placeholder {
-		color: @c;
-	}
+.ease2 {
+	-webkit-transition: all 400ms cubic-bezier(@cubes2); 
+	   -moz-transition: all 400ms cubic-bezier(@cubes2); 
+	     -o-transition: all 400ms cubic-bezier(@cubes2); 
+	        transition: all 400ms cubic-bezier(@cubes2); /* custom */
+
+	-webkit-transition-timing-function: cubic-bezier(@cubes2); 
+	   -moz-transition-timing-function: cubic-bezier(@cubes2); 
+	     -o-transition-timing-function: cubic-bezier(@cubes2); 
+	        transition-timing-function: cubic-bezier(@cubes2); /* custom */
+}
+
+.ease-special {
+	-webkit-transition: all 500ms cubic-bezier(0.305, 0.750, 0.720, 0.985); 
+	   -moz-transition: all 500ms cubic-bezier(0.305, 0.750, 0.720, 0.985); 
+	     -o-transition: all 500ms cubic-bezier(0.305, 0.750, 0.720, 0.985); 
+	        transition: all 500ms cubic-bezier(0.305, 0.750, 0.720, 0.985); /* custom */
+
+	-webkit-transition-timing-function: cubic-bezier(0.305, 0.750, 0.720, 0.985); 
+	   -moz-transition-timing-function: cubic-bezier(0.305, 0.750, 0.720, 0.985); 
+	     -o-transition-timing-function: cubic-bezier(0.305, 0.750, 0.720, 0.985); 
+	        transition-timing-function: cubic-bezier(0.305, 0.750, 0.720, 0.985); /* custom */
 }
