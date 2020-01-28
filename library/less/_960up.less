@@ -176,12 +176,10 @@ body {
 *********************/
 
 #office-plus-menu {
-	position: absolute;
+	position: inherit;
 	background: none;
-	left: 50%;
-	margin: 20px 0 0 -470px;
-	max-width: 940px;
-	height: 52px;
+	background-color: #000000;
+	height: 155px;
 	opacity: 1;
 	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 
@@ -189,9 +187,11 @@ body {
 		float: left;
 
 		.office-plus-logo {
-			background: url(../images/ucf-office-plus-logo.png) no-repeat;
-			width: 134px;
-			height: 52px;
+			background: url(../images/office-plus-logo.png) no-repeat;
+			width: 265px;
+			height: 77px;
+			margin-left: 60px;
+			margin-top: 40px;
 		}
 
 	}
@@ -208,84 +208,55 @@ body {
 
 	.right-container {
 		position: relative;
-		float: right;
+		float: left;
 		height: 100%;
 
 		#office-plus-nav {
+			display: table-cell;
 
 			li {
 				float: left;
 				margin-left: 30px;
 
 				&:first-child {
-					margin-left: 0;
+					margin-left: 90px;
 				}
 
 				a {
 					color: #FFF;
-					.montserrat-reg;
-					font-size: 13px;
+					.aktiv-med;
+					font-size: 18px;
 				}
-
-				&.log-in-link,
-				&.lost-card-link {
-
-					a {
-						.border-radius(20px);
-						padding: 10px 20px;
-						.montserrat-bold;
-					}
-
-				}
-
-				&.lost-card-link {
-
-					a {
-						border: 2px solid #FFF;
-						.transition();
-
-						&:hover {
-							background: #FFF;
-							color: #2f3230;
-						}
-					}
-
-				}
-
-				&.log-in-link {
-
-					a {
-						position: relative;
-						border: 2px solid #ffc100;
-						background: #ffc100;
-						padding-left: 43px;
-						padding-right: 30px;
-						.transition();
-
-						&:before {
-							.pseudo;
-							background: url(../images/log-in-cash-icon.png) no-repeat;
-							width: 12px;
-							height: 16px;
-							left: 25px;
-							top: 50%;
-							margin-top: -7px;
-						}
-
-						&:hover {
-							border: 2px solid #e3ad01;
-							background: #e3ad01;
-						}
-
-					}
-
-				}
-
 
 			}
-
 		}
 
+	}
+
+	.order-now {
+		font-family: brandon-grotesque, sans-serif;
+		display: table-cell;
+		background-color: #CC0000;
+		color: #FFF;
+		margin-top: 53px;
+		margin-right: 36px;
+		height: 50px;
+		width: 150px;
+		.aktiv-med;
+		letter-spacing: 1px;
+		font-size: 14px;
+		float: right;
+		border-radius: 4px;
+
+		a{
+			color: #FFFFFF;
+			display: block;
+			vertical-align: middle;
+			width: 100%;
+			height: 100%;
+			padding-left: 36px;
+			padding-top: 18px;
+		}
 	}
 
 }
@@ -565,10 +536,37 @@ body {
 		height: 100%;
 	}
 
+	.cta-section {
+		height:100%;
+		display: flex;
+
+		.outer {
+			text-align: center;
+			max-width: 1088px;
+			margin: 0 auto;
+		}
+
+		a {
+			margin-top: 70px;
+			display: block;
+			color: @blue;
+			background-color: @offwhite;
+			font-size: 12px;
+			text-transform: uppercase;
+			text-align: center;
+			height: 60px;
+			width: 260px;
+			.aktiv-bold;
+			letter-spacing: 2px;
+			padding-top:23px;
+
+		}
+	}
+
 }
 
 .full-cta {
-	height: 500px;
+	height: 430px;
 
 	.inner-cta-title {
 		font-size: 60px;
@@ -1221,11 +1219,12 @@ body {
 *********************/
 
 #office-plus-footer {
-	padding: 40px 0 70px;
+	height: 140px;
+	background-color: #04264A;
 
 	.inner-footer-container {
-		width: 910px;
-		margin: 0 auto;
+		margin: 0 auto 0 60px;
+		padding-top: 30px;
 
 		.logo-container {
 			float: left;
@@ -1247,9 +1246,24 @@ body {
 		}
 
 		.right-container {
-			float: right;
+			float: left;
 			margin-top: 25px;
 			.text-left;
+			margin-left: 80px;
+
+			.copy-text {
+				color: #B4C6D9;
+
+				a {
+					color: @offwhite;
+				}
+			}
+
+
+
+			p:nth-child(2) {
+				margin-top: 10px;
+			}
 
 			.menu-lists {
 

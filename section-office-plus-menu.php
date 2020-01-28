@@ -1,6 +1,7 @@
 <div id="office-plus-menu">
 
     <div id="desktop-menu">
+
         <div class="logo-container">
             <a href="<?php echo get_bloginfo ( 'url' ); ?>" class="office-plus-logo"></a>
         </div>
@@ -18,11 +19,15 @@
                         ));
                     ?>
 
-                    <a href="https://www.staplesadvantage.com/shop/sahome?storeId=10101" class="menu-red-btn">Order Now</a>
+
                 </div>
 
             </div>
 
+        </div>
+
+        <div class="order-now">
+            <a href="https://www.staplesadvantage.com/shop/sahome?storeId=10101" class="menu-red-btn">Order Now</a>
         </div>
 
         <div class="clear"></div>

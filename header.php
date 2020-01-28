@@ -53,8 +53,9 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancyselect/fancySelect.css" type="text/css" media="screen" />
 
     <?php /* Typekit */ ?>
-    <script src="//use.typekit.net/ahs4vma.js"></script>
+    <script src="https://use.typekit.net/oth6zur.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+
     <?php gravity_form_enqueue_scripts( 4, TRUE ); ?>
 
     <?php wp_head(); ?>
@@ -63,6 +64,4 @@
 <body <?php body_class(); ?>>
 
 <article id="wrap">
-
-    <?php get_template_part( 'section', 'office-plus-header' ); ?>
 

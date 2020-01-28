@@ -26,7 +26,7 @@ add_theme_support( 'post-thumbnails' );
 add_filter( 'gform_dropbox_ssl_compatibility', '__return_true' );
 
 /* Google Analytics Settings Code */
-$google_analytics_setting = new google_analytics_setting();
+/*$google_analytics_setting = new google_analytics_setting();
 class google_analytics_setting {
 
     function google_analytics_setting() {
@@ -43,7 +43,7 @@ class google_analytics_setting {
         echo '<textarea rows="7" id="google_analytics_code" name="google_analytics_code" style="width: 100%;">' . $value . '</textarea>';
     }
 
-}
+}*/
 
 /* Print Within WP Head */
 add_action( 'wp_head', 'google_head' );

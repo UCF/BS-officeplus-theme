@@ -60,14 +60,14 @@ Template Name: Blog
             </div>
 
 
-            <div id="posts">
+            <!--<div id="posts">
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
                     <?php global $post;
 
                     print_post($post);
 
-                    ?>
+                    ?>-->
 
                 <?php endwhile; endif; ?>
             </div>

@@ -16,7 +16,7 @@ Template Name: Office Plus Home*/ ?>
 
         <?php if ( get_field( 'cta_image' ) ) { ?>
 
-            <section class="cta">
+            <section class="full-cta">
 
                 <div class="cta-section" style="background: url(<?php the_field( 'cta_image' ); ?>) no-repeat; background-position: center; background-size: cover;">
 
@@ -27,7 +27,7 @@ Template Name: Office Plus Home*/ ?>
                             <div class="inner-cta-container">
                                 <div class="center">
                                     <div class="inner-cta-title"><?php the_field( 'cta_title' ); ?></div>
-                                    <div class="inner-cta-subtitle"><?php the_field( 'cta_subtitle' ); ?></div>
+                                    <div class="inner-cta-subheading"><?php the_field( 'cta_subtitle' ); ?></div>
                                     <a href="<?php the_field( 'cta_link' ); ?>">
                                         <?php the_field( 'cta_text' ); ?>
                                     </a>
