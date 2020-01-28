@@ -7,7 +7,7 @@
  *	serialized arrays as well.
 **/
 
-class MySQL_Replace {
+/*class MySQL_Replace {
 	
 	public static $tables = array(
 		'wp_options' => array(
@@ -71,5 +71,5 @@ class MySQL_Replace {
 	}//function
 	
 }
-
+*/
 ?>
