@@ -61,9 +61,11 @@ Template Name: Office Plus Home*/ ?>
                         <h2 class="section-title"><?php the_field( 'body_section_title' ); ?></h2>
                         <div class="body-content"><?php the_field( 'body_section_content_1' ); ?></div>
                         <div class="body-content"><?php the_field( 'body_section_content_2' ); ?></div>
-                        <a href="<?php the_field( 'body_order_link' ); ?>">
-                            <?php the_field( 'body_order_text' ); ?>
-                        </a>
+                        <div class="order-now home-order">
+                            <a href="<?php the_field( 'body_order_link' ); ?>">
+                                <?php the_field( 'body_order_text' ); ?>
+                            </a>
+                        </div>
                     </div>
 
                 </div>

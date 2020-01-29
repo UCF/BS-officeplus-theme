@@ -532,7 +532,7 @@ a {
 
 .center-pad {
 	max-width: 1088px;
-	margin: 0 auto;
+	margin: 60px auto;
 }
 
 
@@ -582,7 +582,7 @@ h2 {
 	letter-spacing: -1px;
 
 	&.section-title {
-		text-align: center;
+		text-align: left;
 		letter-spacing: -1px;
 	}
 		
@@ -602,7 +602,9 @@ h5 {
 
 p {
 	.proxima-reg;
-	font-size: 14px;
+	font-size: 18px;
+	line-height: 26px;
+	color: @text-gray;
 }
 
 /*****************
@@ -1283,6 +1285,60 @@ body.page-template-template-contact {
 
 }
 
+.body-content {
+	margin-top: 40px;
+
+	p:nth-child(2) {
+		margin-top:15px;
+		color: #777777;
+	}
+}
+
+
+.order-now {
+	font-family: brandon-grotesque, sans-serif;
+	display: table-cell;
+	background-color: #CC0000;
+	color: #FFF;
+	margin-top: 53px;
+	margin-right: 36px;
+	height: 50px;
+	width: 150px;
+	.aktiv-med;
+	letter-spacing: 1px;
+	font-size: 14px;
+	float: right;
+	border-radius: 4px;
+
+	a{
+		color: #FFFFFF;
+		display: block;
+		vertical-align: middle;
+		width: 100%;
+		height: 100%;
+		padding-left: 36px;
+		padding-top: 18px;
+	}
+
+}
+
+.home-order {
+	float: left;
+	margin-bottom: 80px;
+}
+
+.home-bullets {
+	.proxima-reg;
+	list-style-type: disc;
+	margin-top: 15px;
+
+	li {
+		color: #777777;
+		margin-left: 40px;
+		line-height: 1.5em;
+	}
+}
+
 #office-plus-create-account {
 	height: 400px;
 	background-color: @dark-gray;
@@ -1374,7 +1430,7 @@ body.page-template-template-contact {
 		p {
 			.proxima-reg;
 			font-size: 18px;
-			color: #FFF;
+			color: @text-gray;
 		}
 
 		ul {
@@ -4504,143 +4560,6 @@ body.page-template-template-contact {
  POPUP
 *********************/
 
-.popup-overlay {
-	background: #000;
-	opacity: 0.7;
-	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 51;
-}
-
-#Popup {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 999;
-	overflow-y: auto;
-
-	.popup-close {
-		position: absolute;
-		right: 30px;
-		top: 30px;
-		background: url(../images/close-popup.png) no-repeat;
-		width: 22px;
-		height: 21px;
-		display: block;
-	}
-
-	.article-popup {
-		position: relative;
-		width: 100%;
-		margin: 0 auto;
-		z-index: 2;
-		top: 100px;
-
-		.header {
-			position: relative;
-			width: 100%;
-			height: 300px;
-
-			.overlay {
-				background: #000;
-				opacity: 0.4;
-				 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				z-index: 1;
-			}
-
-
-		}
-
-	}
-
-	.header-info-container {
-		position: relative;
-		z-index: 2;
-	}
-
-	.date-outer-container {
-		position: absolute;
-		width: 100%;
-		bottom: 25px;
-		z-index: 2;
-
-		.date-container {
-			width: 100%;
-			color: #FFF;
-			.brandon-bold;
-			font-size: 20px;
-			.text-left;
-		}
-
-	}
-
-	.post-container {
-		background: #FFF;
-		padding: 30px 0 50px;
-		margin-bottom: 100px;
-
-		.post-inner-container {
-			width: 100%;
-			.text-left;
-
-			h3 {
-				.brandon-bold;
-				color: #2f3230;
-				font-size: 25px;
-				text-transform: none;
-				letter-spacing: normal;
-				line-height: 1.4em;
-			}
-
-			.post-content {
-				.proxima-reg;
-				color: #808080;
-				font-size: 18px;
-				line-height: 1.6em;
-				margin-top: 20px;
-
-				p {
-					.proxima-reg;
-					color: #808080;
-					font-size: 18px;
-					margin-top: 35px;
-
-					&:first-child {
-						margin-top: 0;
-					}
-
-				}
-
-				blockquote {
-					.proxima-italic;
-					font-size: 26px;
-					max-width: 645px;
-					margin: 0 auto;
-					.text-center;
-					color: #414241;
-					line-height: 1.3em;
-				}
-
-			}
-
-		}
-	}
-
-
-}
-
-
 /*********************
 13. FOOTER STYLES
 *********************/
@@ -4667,12 +4586,6 @@ body.page-template-template-contact {
 			line-height: 1.4em;
 			margin: 25px auto 0;
 
-			p {
-				.proxima-reg;
-				font-size: 16px;
-				line-height: 1.4em;
-			}
-
 		}
 
 	}
@@ -4680,54 +4593,11 @@ body.page-template-template-contact {
 	.right-container {
 		.text-center;
 
-		.menu-lists {
-			overflow: hidden;
-
-			li {
-
-				.footer-menu-title {
-					.brandon-bold;
-					color: #787a78;
-					font-size: 16px;
-					margin-top: 20px;
-				}
-
-				.menu {
-
-					li {
-						margin-top: 20px;
-
-						a {
-							color: #FFF;
-							.brandon-reg;
-							font-size: 13px;
-						}
-
-					}
-
-				}
-
-				&.social-links {
-
-					.footer-social-icon-container {
-						width: 50px;
-						margin: 20px auto 0;
-
-						.footer-social-icon {
-							float: left;
-
-							&.fb {
-								margin-left: 10px;
-							}
-
-						}
-
-					}
-
-				}
-
-			}
-
+		p {
+			.proxima-reg;
+			font-size: 16px;
+			line-height: 1.4em;
+			color: #B4C6D9;
 		}
 
 	}
