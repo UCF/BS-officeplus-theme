@@ -29,53 +29,169 @@ h2 {
 	z-index: 5;
 }
 
-
 /*********************
 06. HEADER SYTLES
 *********************/
 
-/*********************
-06. HEADER SYTLES
-*********************/
+#desktop-menu {
+	@media screen and (min-width: 768px){
+		display: block;
+	}
+}
+
+#mobile-menu {
+	display: none;
+}
 
 #office-plus-menu {
+	position: inherit;
+	background: none;
+	background-color: #000000;
+	height: 155px;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 
-	
-}
-
-#header {
-	height: 70px;
-	position: absolute;
-	width: 100%;
-	top: 50px;
-
-	#logo {
-		width: 272px;
-		height: 14px;
+	.logo-container {
 		float: left;
-		margin: 27px 20px 17px 0;
-	}
 
-	.menu-button {
-		display: none;
-		
-	}
-
-}
-
-#gform_fields_2 {
-
-	li {
-		width: 210px;
-		float: left;
-		margin: 0;
-
-		input {
-			width: 100%;
+		.office-plus-logo {
+			background: url(../images/office-plus-logo.png) no-repeat;
+			width: 265px;
+			height: 77px;
+			margin-left: 60px;
+			margin-top: 40px;
 		}
 
-		&.center-field {
-			margin: 0 20px;
+	}
+
+	#desktop-menu {
+		position: relative;
+		height: 100%;
+		display: block;
+
+	}
+
+	#mobile-menu {
+		display: none;
+	}
+
+	.right-container {
+		position: relative;
+		float: left;
+		height: 100%;
+
+		#office-plus-nav {
+			display: table-cell;
+
+			li {
+				float: left;
+				margin-left: 30px;
+
+				&:first-child {
+					margin-left: 90px;
+				}
+
+				a {
+					color: #FFF;
+					.aktiv-med;
+					font-size: 18px;
+				}
+
+			}
+		}
+
+	}
+
+}
+
+.office-plus-header {
+	position: relative;
+	width: 100%;
+	height: 430px;
+	color: #FFF;
+
+	.header-container {
+		position: relative;
+		z-index: 2;
+	}
+
+	.overlay {
+		position: absolute;
+		background: #2f3230;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.50;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		z-index: 1;
+	}
+
+}
+
+.full-cta {
+	height: 430px;
+
+	.inner-cta-title {
+		font-size: 60px;
+	}
+
+	&:hover {
+
+		.overlay {
+			opacity: 0.90;
+		}
+
+		.cta-img {
+			-webkit-transform: scale(1.02);
+			-moz-transform: scale(1.02);
+			-ms-transform: scale(1.02);
+			-o-transform: scale(1.02);
+			transform: scale(1.02);
+		}
+
+	}
+
+}
+
+.full-cta,
+.side-by-side-ctas {
+
+	.cta-img,
+	.overlay {
+		.transition(all, 0.80s);
+	}
+
+	.cta-img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.cta-section {
+		height:100%;
+		display: flex;
+
+		.outer {
+			text-align: center;
+			max-width: 1088px;
+			margin: 0 auto;
+		}
+
+		a {
+			margin-top: 70px;
+			display: block;
+			color: @blue;
+			background-color: @offwhite;
+			font-size: 12px;
+			text-transform: uppercase;
+			text-align: center;
+			height: 60px;
+			width: 260px;
+			.aktiv-bold;
+			letter-spacing: 2px;
+			padding-top:23px;
+
 		}
 	}
 
@@ -85,135 +201,9 @@ h2 {
 07. NAVIGATION STYLES
 *********************/
 
-#gray-bar {
-	position: absolute;
-	height: 70px;
-	width: 100%;
-	z-index: 10;
-	background: transparent;
-
-	.center {
-		overflow: hidden;
-		padding: 0 20px;
-		
-	}
-}
-
-#nav-bar {
-	top: 0;
-
-}
-
-// #main-nav {
-// 	width: auto;
-// }
-
-#main-nav {
-	float: right;
-	position: relative;
-	background: transparent;
-	z-index: 10;
-	// top: 40px;
-	width: 50%;
-	right: 0;
-	opacity: 1;
-
-	padding-top: 10px;
-	top: 0;
-
-	-webkit-transform: translate3D(0, 0, 0);
-	-moz-transform: translate3D(0, 0, 0);
-	-o-transform: translate3D(0, 0, 0);
-	transform: translate3D(0, 0, 0);
-
-	.menu-item {
-		display:inline-block;
-		width: auto;
-		padding: 0 10px;
-
-		a {
-			line-height: 50px;
-
-
-			&:after {
-				.ease1;
-			}
-		}
-	}
-}
-
-#gform_fields_2 li:first-child {
-	//margin-right: 20px !important; 
-}
-
-#gform_wrapper_2 {
-	.gform_footer {
-		padding: 0 !important;
-		margin: 0 !important;
-		.text-center;
-	}
-
-	.disclaimer-msg {
-		display: none;
-	}
-}
-
-
 /*********************
 02. CTAS
 *********************/
-
-#keep-up {
-	height: 400px;
-	background: url(../images/background-keep-up.jpg) no-repeat center;
-	background-size: cover;
-
-	h3 {
-		.proxima-reg;
-		font-size: 2.5em;
-		margin-bottom: 5px;
-		position: relative;
-
-	}
-	h4 {
-		.proxima-bold;
-		font-size: 3.75em;
-		margin-bottom: 30px;
-		
-	}
-	.inner {
-		padding: 111px 20px 0;
-		position: relative;
-		z-index: 10;
-		text-align: center;
-	}
-}
-
-#find-us-cta {
-	
-	.left, .right {
-		height: 300px;
-
-
-
-		.inner {
-			padding-top: 105px;
-		
-		}
-	}
-	.left {
-		width: 50%;
-
-		h5 {
-
-		}
-
-
-	}
-	.right {
-		width: 50%;
-	}
-}
 
 /**********************
 10. Filters
@@ -272,89 +262,6 @@ h2 {
 /*********************
 08. CONTENT
 *********************/
-
-.tapingo-section {
-
-	.iphone {
-		width: 480px;
-		margin: 0 auto;
-	}
-
-}
-
-.fees-info-section {
-
-	.float-container {
-
-		.right-container {
-
-			.video-placeholder {
-				height: 400px;
-			}
-
-		}
-
-	}
-
-}
-
-.fairwinds-section {
-
-	.left-side {
-		.center-pad {
-			
-		}
-	}
-
-	img {
-		width: 330px;
-		margin: 0 auto;
-	}
-
-}
-
-.newsletter-sign-up {
-	height: 400px;
-	padding: 0;
-
-	#newsletter-form {
-		width: 670px;
-		margin: 0 auto;
-
-		.form-row {
-
-			.form-col {
-				float: left;
-				margin-right: 20px;
-				margin-top: 0; 
-
-				&.last {
-					margin: 0;
-				}
-
-				input {
-					width: 210px;
-				}
-
-			}
-
-		}
-
-		.checkbox-container {
-			margin: 20px 0 30px;
-		}
-
-		.checkbox-input {
-			width: 383px;
-		}
-
-		.center-pad {
-			padding: 0;
-		}
-
-	}
-
-}
 
 #content {
 
@@ -468,79 +375,112 @@ h2 {
 09. PAGE NAVI STYLES
 *********************/
 
-
 /*********************
 13. FOOTER STYLES
 *********************/
 
-#footer {
+#office-plus-footer {
+	height: 140px;
+	background-color: #04264A;
 
-	.center {
-		padding: 20px;
-		max-width: 800px;
-		text-align: center;
-	}
+	.inner-footer-container {
+		margin: 0 auto 0 60px;
+		padding-top: 30px;
 
-	.small-text {
-		text-align: center;
-
-		a {
-			color: white;
-		}
-	}
-
-	.footer-about {
-
-		p {
-			max-width: 500px;
-			margin: 0 auto;
-		}
-	}
-
-	.footer-links {
-		display: inline-block;
-		
-		.menu {
-		}
-		.link-col {
-			text-align: left;
+		.logo-container {
 			float: left;
-			position: relative;
-			display: inline-block;
-			width: auto;
-			margin-right: 40px;
 
-			&:nth-child(4) {
+			.office-plus-logo {
+				margin: 0;
+			}
+
+			.footer-desc {
+				margin-top: 25px;
+				margin-left: 0;
 				margin-right: 0;
 			}
 
-		}
-
-		.menu-item {
-			
-			
-		}
-	}
-
-	.footer-logo {
-		float: left;
-
-		.logo-container {
-			margin: 0 0 10px;
-			
-			.small-text {
-				text-align: left;
+			.center-pad {
+				padding: 0;
 			}
+
 		}
+
+		.right-container {
+			float: left;
+			margin-top: 25px;
+			.text-left;
+			margin-left: 80px;
+
+			.copy-text {
+				color: #B4C6D9;
+
+				a {
+					color: @offwhite;
+				}
+			}
+
+
+
+			p:nth-child(2) {
+				margin-top: 10px;
+			}
+
+			.menu-lists {
+
+				li {
+					float: left;
+					margin-left: 75px;
+
+					&:first-child {
+						margin-left: 0;
+					}
+
+					.footer-menu-title {
+						margin-top: 0;
+					}
+
+					.menu {
+
+						li {
+							float: none;
+							margin-left: 0;
+
+							a {
+								.transition();
+
+								&:hover {
+									color: #f9bd01;
+								}
+							}
+						}
+
+					}
+
+					&.social-links {
+
+						.footer-social-icon-container {
+							width: auto;
+							margin: 0;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
 	}
 
-	.disclaimer {
-		float: right;
-		margin-top: 77px;
+}
 
-		.small-text {
-			text-align: right;
-		}
+#footer {
+
+	.center {
+		padding: 50px 20px;
+		max-width: 1080px;
 	}
 
 }
@@ -548,3 +488,89 @@ h2 {
 /*********************
 14. PAGES
 *********************/
+
+.blue-section {
+
+	.body-container {
+		flex-direction: row;
+		.left-container {
+			width: 40%;
+			padding: 0 60px 0 60px;
+		}
+
+		.right-container {
+			width: 60%;
+			padding: 0 60px 0 60px;
+		}
+	}
+}
+
+.off-white-section {
+	background-color: @offwhite;
+}
+
+.faq-link {
+	position: relative;
+	.proxima-bold;
+	font-size: 18px;
+	display: inline-block;
+	color: @offwhite;
+
+	&:before {
+		.pseudo;
+		background: url(../images/faq-sign-sprite.png) no-repeat;
+		.background-size(20px, 40px);
+		background-position: 0 -20px;
+		width: 20px;
+		height: 20px;
+		left: 0;
+		top: 4px;
+	}
+
+	&.active {
+
+		&:before {
+			.background-size(20px, 40px);
+			background-position: 0 0;
+		}
+
+	}
+
+}
+
+.faq-link,
+.faq-info {
+	margin-top: 20px;
+	line-height: 1.5em;
+	padding-left: 30px;
+}
+
+.faq-info {
+	.proxima-reg;
+	display: block;
+	margin-top: 6px;
+
+	a {
+		.proxima-bold;
+		color: white;
+	}
+
+	p {
+		opacity: 90%;
+		.proxima-reg;
+		font-size: 14px;
+		line-height: 18px;
+		color: @offwhite;
+		padding-bottom: 6px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			padding-bottom: 10px;
+		}
+
+	}
+
+}

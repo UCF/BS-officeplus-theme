@@ -6,12 +6,6 @@
 
             <a href="<?php echo get_bloginfo ( 'url' ); ?>" class="office-plus-logo"></a>
 
-            <div class="center-pad">
-                <div class="footer-dec">
-                    <?php echo get_field( 'footer_description', 589); ?>
-                </div>
-            </div>
-
         </div>
 
         <div class="right-container">

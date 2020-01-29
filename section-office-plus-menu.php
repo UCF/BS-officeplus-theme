@@ -48,7 +48,7 @@
                         <a href="<?php echo get_bloginfo( 'url'); ?>" class="office-plus-logo"></a>
                     </div>
 
-                    <div class="divider"></div>
+                    <div class="clear"></div>
 
                     <?php
                         wp_nav_menu( array(
