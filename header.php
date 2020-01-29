@@ -45,16 +45,12 @@
 
 
     <?php /* FancyBox */ ?>
-    <!--
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-    -->
 
     <?php /* FancySelect */ ?>
-    <!--
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancyselect/fancySelect.css" type="text/css" media="screen" />
-    -->
 
     <?php /* Typekit */ ?>
     <script src="https://use.typekit.net/oth6zur.js"></script>

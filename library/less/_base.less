@@ -80,6 +80,10 @@ a {
 
 }
 
+.off-white {
+	color: @offwhite;
+}
+
 #map {
 	position: relative;
 	height: 300px;
@@ -532,7 +536,8 @@ a {
 
 .center-pad {
 	max-width: 1088px;
-	margin: 60px auto;
+	margin: 0px auto;
+	padding: 60px 0;
 }
 
 
@@ -2331,10 +2336,95 @@ body.page-template-template-contact {
 
 }
 
+.blue-section {
+	background-color: @blue;
+
+	.body-container {
+		display: flex;
+		.left-container {
+			max-width: 40%;
+			padding: 0 60px 0 60px;
+		}
+
+		.right-container {
+			max-width: 60%;
+			padding: 0 60px 0 60px;
+		}
+	}
+}
+
+.off-white-section {
+	background-color: @offwhite;
+}
+
+.faq-link {
+	position: relative;
+	.proxima-bold;
+	font-size: 20px;
+	display: inline-block;
+	color: @offwhite;
+
+	&:before {
+		.pseudo;
+		background: url(../images/faq-sign-sprite.png) no-repeat;
+		.background-size(20px, 40px);
+		background-position: 0 -20px;
+		width: 20px;
+		height: 20px;
+		left: 0;
+	}
+
+	&.active {
+
+		&:before {
+			.background-size(20px, 40px);
+			background-position: 0 0;
+		}
+
+	}
+
+}
+
+.faq-link,
+.faq-info {
+	margin-top: 20px;
+	line-height: 1.5em;
+	padding-left: 30px;
+}
+
+.faq-info {
+	.proxima-reg;
+	display: block;
+	margin-top: 10px;
+
+	a {
+		.proxima-bold;
+		color: white;
+	}
+
+	p {
+		opacity: 90%;
+		.proxima-reg;
+		font-size: 14px;
+		line-height: 18px;
+		color: @offwhite;
+		padding-bottom: 6px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			padding-bottom: 10px;
+		}
+
+	}
+
+}
+
 .white-section {
 	position: relative;
 	background: #FFF;
-	padding: 40px 0;
 	overflow: hidden;
 
 	.faded-logo {
@@ -2661,74 +2751,6 @@ body.page-template-template-contact {
 			.right-container {
 				margin-top: 30px;
 			}
-		}
-
-	}
-
-	.faq-link {
-		position: relative;
-		.brandon-reg;
-		font-size: 16px;
-		display: inline-block;
-		color: #2f3230;
-		text-transform: none;
-
-		&:before {
-			.pseudo;
-			background: url(../images/faq-sign-sprite.png) no-repeat;
-			.background-size(20px, 40px);
-			background-position: 0 -20px;
-			width: 20px;
-			height: 20px;
-			left: 0;
-		}
-
-		&.active {
-
-			&:before {
-				.background-size(20px, 40px);
-				background-position: 0 0;
-			}
-
-		}
-
-	}
-
-	.faq-link, 
-	.faq-info {
-		margin-top: 20px;
-		line-height: 1.5em;
-		padding-left: 30px;
-	}
-
-	.faq-info {
-		color: #808080;
-		.proxima-reg;
-		font-size: 18px;
-		display: none;
-
-		&.show {
-			display: block;
-			padding: 0;
-
-			a {
-				color: #808080;
-				.proxima-reg;
-				font-size: 18px;
-			}
-
-		}
-
-		p {
-			color: #808080;
-			.proxima-reg;
-			font-size: 18px;
-			margin-top: 30px;
-
-			&:first-child {
-				margin-top: 0;
-			}
-
 		}
 
 	}

@@ -52,11 +52,11 @@ Template Name: Office Plus Contact
 
 			=- =- =- =- =- =- =- =- =- =- =- */ ?>
 
-        <section class="off-white-section">
+        <section class="blue-section">
 
             <div class="body-container">
 
-                <div class="left-container blue-section">
+                <div class="left-container">
 
                     <div class="center-pad">
 
@@ -95,8 +95,8 @@ Template Name: Office Plus Contact
                                         <ul>
                                             <?php foreach ( $faqs as $faq ) { ?>
                                                 <li>
-                                                    <a class="faq-link" href="#" data-faq-num="<?php echo $faq->ID; ?>"><?php echo $faq->post_title; ?></a>
-
+                                                    <!--<a class="faq-link" href="#" data-faq-num="<?php echo $faq->ID; ?>"><?php echo $faq->post_title; ?></a>-->
+                                                    <p class="faq-link" data-faq-num="<?php echo $faq->ID; ?>"><?php echo $faq->post_title; ?></p>
                                                     <div class="faq-info"><?php echo wpautop( $faq->post_content ); ?></div>
                                                 </li>
                                             <?php } ?>
@@ -112,7 +112,7 @@ Template Name: Office Plus Contact
 
                     </div>
 
-                <div class="right-container">
+                <div class="right-container off-white-section">
 
                     <div class="center-pad">
 
@@ -141,6 +141,29 @@ Template Name: Office Plus Contact
     </div>
 
 <?php endwhile; endif; ?>
+
+<!--<script type="text/javascript">
+
+    jQuery(document).ready( function($) {
+
+        $('.faq-link').on( 'click', function(evt) {
+            evt.preventDefault();
+
+            if ( $(this).hasClass( 'active' ) ) {
+                $(this).parent().find( '.faq-info' ).slideUp( 300 );
+                $(this).removeClass( 'active' );
+            } else {
+                $('.faq-link.active').removeClass( 'active' ).parent().find( '.faq-info' ).slideUp( 300 );
+                $(this).addClass( 'active' );
+                $(this).parent().find( '.faq-info' ).slideDown( 300 );
+            }
+
+        } );
+
+    });
+
+</script>
+-->
 
 <?php get_template_part( 'section', 'office-plus-create-account' ); ?>
 <?php get_template_part( 'section', 'office-plus-footer' ); ?>
