@@ -53,8 +53,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/js/fancyselect/fancySelect.css" type="text/css" media="screen" />
 
     <?php /* Typekit */ ?>
-    <script src="https://use.typekit.net/oth6zur.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="https://use.typekit.net/oth6zur.css">
 
     <?php gravity_form_enqueue_scripts( 4, TRUE ); ?>
 
