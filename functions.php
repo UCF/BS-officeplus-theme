@@ -16,7 +16,8 @@ require_once( TEMPLATEPATH.'/library/includes/wp-header-remove.php' );
 
 //	menus
 register_nav_menus( array(
-	'main-nav' => 'Main Navigation'
+	'office-plus-nav' => 'Office Plus Nav',
+    'office-plus-mobile-nav' => 'Office Plus Mobile Nav'
 ) );
 
 //	post thumbnails
