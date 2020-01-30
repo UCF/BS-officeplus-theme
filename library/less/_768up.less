@@ -394,10 +394,10 @@ h2 {
 
 	.inner-footer-container {
 		margin: 0 auto 0 60px;
-		padding-top: 30px;
 
 		.logo-container {
 			float: left;
+			padding-top: 30px;
 
 			.office-plus-logo {
 				margin: 0;
@@ -501,14 +501,14 @@ h2 {
 .blue-section {
 
 	.body-container {
-		flex-direction: row;
+		flex-direction: row-reverse;
 		.left-container {
-			width: 40%;
+			width: 60%;
 			padding: 0 60px 0 60px;
 		}
 
 		.right-container {
-			width: 60%;
+			width: 40%;
 			padding: 0 60px 0 60px;
 		}
 	}
@@ -516,10 +516,6 @@ h2 {
 	.center-pad {
 		padding: 60px 0;
 	}
-}
-
-.off-white-section {
-	background-color: @offwhite;
 }
 
 .faq-link {
@@ -553,7 +549,7 @@ h2 {
 
 .faq-link,
 .faq-info {
-	margin-top: 20px;
+	margin-top: 10px;
 	line-height: 1.5em;
 	padding-left: 30px;
 }
@@ -561,7 +557,7 @@ h2 {
 .faq-info {
 	.proxima-reg;
 	display: block;
-	margin-top: 6px;
+	margin-top: 4px;
 
 	a {
 		.proxima-bold;
@@ -586,4 +582,37 @@ h2 {
 
 	}
 
+}
+
+/*********************
+     FORM STYLES
+*********************/
+.gform_wrapper {
+	overflow: hidden;
+	.name_first, .name_last, input {
+		width: 100% !important;
+		padding: 0;
+	}
+
+	li {
+		padding-right: 0 !important;
+	}
+
+	#input_1_5 > li.gchoice_1_5_6 {
+		display: flex;
+		flex-direction: row;
+	}
+
+	select {
+		background-color: @offwhite;
+		border: 0px;
+		border-bottom: 3px solid @blue;
+		color: @text-gray;
+	}
+
+	#field_2_11 {
+		span {
+			margin-top: 6px;
+		}
+	}
 }
