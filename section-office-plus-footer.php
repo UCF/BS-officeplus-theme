@@ -1,4 +1,4 @@
-<div id="office-plus-footer">
+<footer id="office-plus-footer">
 
     <div class="inner-footer-container">
 
@@ -23,4 +23,10 @@
 
     </div>
 
-</div>
+</footer>
+
+<?php wp_footer(); ?>
+
+</body>
+
+</html>
