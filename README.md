@@ -6,6 +6,8 @@
 Repository for OfficePlus.ucf.edu WordPress theme build, created by Mike Setzer, maintained by Business Services.
 This project includes a full setup of GruntJS and LESS for automation, and Jenkins for deployment.
 
+-----
+
 ## System Preparation
 1. [NodeJS](https://nodejs.org) - Use the installer.
 2. [GruntJS](https://github.com/gruntjs/grunt) - `$ npm install grunt grunt-cli` (mac users may need sudo)
