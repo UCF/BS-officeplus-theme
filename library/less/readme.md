@@ -1,1 +1,1 @@
-![alt text](/giphy-downsized.gif)
+![alt text](less/giphy-downsized.gif)
