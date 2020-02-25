@@ -8,8 +8,8 @@ if(!defined('THEME_URL'))
 	define('THEME_URL', get_bloginfo('template_directory'));
 
 //	fix db after server move
-require_once( TEMPLATEPATH.'/library/includes/mysql-replace.php' );
-MySQL_Replace::replace('old', 'new');
+//require_once( TEMPLATEPATH.'/library/includes/mysql-replace.php' );
+//MySQL_Replace::replace('old', 'new');
 
 //	dependencies
 require_once( TEMPLATEPATH.'/library/includes/wp-header-remove.php' );
