@@ -36,7 +36,7 @@ $ grunt default
 - Reusable template parts, such as menus go to `/template-parts`
 - Individual parts go to `/templates`
 
-**WordPress styletheme modifications are added to the partials folders**
+**WordPress style theme modifications are added to the partials folders**
 
 If you are modifying a plugin's CSS, eg. GravityForms, simply:
 - Add a _gforms.scss file to partials
